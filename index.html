@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="uk">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Мапи, Відео та Аудіо — Приклад</title>
+    <link rel="stylesheet" href="style.css" />
+    <!-- Font Awesome для кнопок соцмереж -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="" crossorigin="anonymous" />
+    <style>
+      /* невелика локальна правка для корекції відступів */
+      header {
+    max-width: 1200p
+x   ; margin: 24px 
+a uto; padding: 0 20px; }
+
+       </style>
+
+     </head>
+  <body>
+    
+<header>
+      
+<h1>Мапа, мультимедіа та інші віджети</h1>
+      <p>Приклад інтеграції Google Maps (мітки, маршрути, стиль, Street View), відео (YouTube / Vimeo), аудіо та кнопок соцмереж.</p>
+    </header>
+
+    <div class="container">
+      <div class="main-content">
+        <h2>Інтерактивна карта</h2>
+        <p>Карта показує кілька точок: гуртожиток студента, навчальний корпус Львівської політехніки, улюблене кафе та пам'ятка. Також показано маршрути між ними та панораму.</p>
+
+        <!-- Google Maps Embed для карти з маршрутом -->
+         <iframe class="map"
+          src="https://www.google.com/maps/embed/v1/place?q=%D0%B2%D1%83%D0%BB%D0%B8%D1%86%D1%8F%20%D0%9B%D0%B5%D1%81%D1%96%20%D0%A3%D0%BA%D1%80%D0%B0%D1%97%D0%BD%D0%BA%D0%B8%2C%2033%2C%20%D0%9B%D1%8C%D0%B2%D1%96%D0%B2%2C%20%D0%9B%D1%8C%D0%B2%D1%96%D0%B2%D1%81%D1%8C%D0%BA%D0%B0%20%D0%BE%D0%B1%D0%BB%D0%B0%D1%81%D1%82%D1%8C%2C%2079000&key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8"
+          allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+
+        <iframe class="map"
+          src="https://www.google.com/maps/embed/v1/directions?origin=%D0%86%D0%BD%D1%81%D1%82%D0%B8%D1%82%D1%83%D1%82%20%D0%B5%D0%BA%D0%BE%D0%BD%D0%BE%D0%BC%D1%96%D0%BA%D0%B8%20%D1%96%20%D0%BC%D0%B5%D0%BD%D0%B5%D0%B4%D0%B6%D0%BC%D0%B5%D0%BD%D1%82%D1%83%2C%20%D0%B2%D1%83%D0%BB%D0%B8%D1%86%D1%8F%20%D0%9C%D0%B8%D1%82%D1%80%D0%BE%D0%BF%D0%BE%D0%BB%D0%B8%D1%82%D0%B0%20%D0%90%D0%BD%D0%B4%D1%80%D0%B5%D1%8F%2C%205%2C%204-%D0%B9%20%D0%BD.%D0%BA%2C%20%D0%9B%D1%8C%D0%B2%D1%96%D0%B2%2C%20%D0%9B%D1%8C%D0%B2%D1%96%D0%B2%D1%81%D1%8C%D0%BA%D0%B0%20%D0%BE%D0%B1%D0%BB%D0%B0%D1%81%D1%82%D1%8C%2C%2079000&destination=%D0%94%D0%BE%D0%B1%D1%80%D0%B8%D0%B9%20%D0%94%D1%80%D1%83%D0%B3%206%20%D0%BF%D0%B0%D0%B1%20%D0%9B%D1%8C%D0%B2%D1%96%D0%B2%20pub%20Lviv%2C%20%D0%B2%D1%83%D0%BB%D0%B8%D1%86%D1%8F%20%D0%90%D0%BA%D0%B0%D0%B4%D0%B5%D0%BC%D1%96%D0%BA%D0%B0%20%D0%90%D0%BD%D0%B4%D1%80%D1%96%D1%8F%20%D0%A1%D0%B0%D1%85%D0%B0%D1%80%D0%BE%D0%B2%D0%B0%2C%2019%D0%B0%2C%20%D0%9B%D1%8C%D0%B2%D1%96%D0%B2%2C%20%D0%9B%D1%8C%D0%B2%D1%96%D0%B2%D1%81%D1%8C%D0%BA%D0%B0%20%D0%BE%D0%B1%D0%BB%D0%B0%D1%81%D1%82%D1%8C%2C%2079000&key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8"
+          allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+
+        <!-- Google Maps Street View панорама -->
+        <iframe class="pano"
+          src="https://www.google.com/maps/embed?pb=!4v1699020124622!6m8!1m7!1sCAoSLEFGMVFpcE5SYzhaSzBhQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFB!2m2!1d49.8354199!2d24.0289263!3f165!4f0!5f0.7820865974627469"
+          allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+
+        <h2>Відео</h2>
+        <p>Вбудоване відео з YouTube (приклад). .</p>
+        <div class="video-wrap">
+          <!-- YouTube embed (edited video hosted on YouTube) -->
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/wp84sRpM1Js?si=rzZCp-motfKMaK5M" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <h2>Аудіо</h2>
+        <p>Додаємо музичний файл</p>
+        <audio controls>
+          <source src="Th_la_Menthe_-_La_Caution_Instrumental_(TheMP3.Info).mp3" type="audio/mpeg">
+        </audio>
+
+        <h2>Додаткові відео / сервіси</h2>
+        <p>Vimeo та Онлайн-ТВ/кінотеатри можна вбудувати через iframe — приклад нижче.</p>
+        <div class="video-wrap">
+          <!-- Vimeo embed (замініть на справжній ID) -->
+          <iframe src="https://player.vimeo.com/video/1127816846?fl=wc" width="800" height="450" frameborder="0" allowfullscreen></iframe>
+          <div>
+          <h2>Instagram </h2>
+          <iframe class=".map" src="https://www.instagram.com/ostap.liutyi/embed" width="800" height="450"></iframe> 
+        </div>
+
+      </div>
+
+
+      
+
+    
+
+  </body>
+</html>

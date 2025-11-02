@@ -1,0 +1,175 @@
+/* --- Базові стилі сторінки --- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Arial, sans-serif;
+}
+
+body {
+  background-color: #f4f4f4;
+  color: #222;
+  line-height: 1.6;
+}
+
+/* --- Контейнер усієї сторінки --- */
+.container {
+  display: grid;
+  grid-template-columns: 1fr; /* віджети тепер під контентом */
+  gap: 20px;
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+/* --- Основний контент --- */
+.main-content {
+  background: #fff;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* --- Блок для віджетів --- */
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Секція віджетів внизу сторінки */
+.widgets-bottom {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 16px;
+  margin-top: 12px;
+}
+
+/* --- Окремий віджет --- */
+.widget {
+  background: #fff;
+  border-left: 5px solid #0057b7; /* кольори України 🇺🇦 :) */
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.08);
+  padding: 15px 20px;
+  transition: 0.3s ease;
+}
+
+.widget:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+/* --- Заголовок віджета --- */
+.widget h3 {
+  color: #003366;
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+  border-bottom: 2px solid #eee;
+  padding-bottom: 5px;
+}
+
+/* --- Для списків у віджеті --- */
+.widget ul {
+  list-style-type: none;
+}
+
+.widget ul li {
+  padding: 6px 0;
+  border-bottom: 1px solid #eee;
+}
+
+.widget ul li:last-child {
+  border-bottom: none;
+}
+
+/* --- Адаптивність --- */
+@media (max-width: 900px) {
+  .container {
+    grid-template-columns: 1fr; /* контент і віджети йдуть один під одним */
+  }
+  .sidebar {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .widget {
+    flex: 1 1 45%;
+  }
+}
+
+/* --- СТИЛІ ДЛЯ МАПИ, ПАНОРАМИ, ВІДЕО, АУДІО ТА СОЦКНОПОК --- */
+.map {
+  width: 100%;
+  height: 420px;
+  border-radius: 10px;
+  overflow: hidden;
+  margin: 16px 0;
+  border: 1px solid #e6e6e6;
+}
+
+.pano {
+  width: 100%;
+  height: 260px;
+  border-radius: 10px;
+  overflow: hidden;
+  margin-bottom: 20px;
+  border: 1px solid #e6e6e6;
+}
+
+.video-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin: 12px 0 20px;
+}
+
+/* Соціальні кнопки */
+.social-buttons {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+.social {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 6px;
+  background: #f0f0f0;
+  color: #333;
+  text-decoration: none;
+  transition: 0.15s ease;
+}
+.social:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.08);
+}
+.social i {
+  font-size: 16px;
+}
+
+/* Невелика адаптивність для карт/відео */
+@media (max-width: 700px) {
+  .map {
+    height: 300px;
+  }
+  .pano {
+    height: 200px;
+  }
+  iframe,
+  video {
+    width: 100%;
+    height: auto;
+  }
+}
+
+/* Підкреслення віджетів у правій колонці для контрасту */
+.sidebar .widget {
+  border-left-color: #0077cc;
+}
+
+/* Додаємо контейнеру основного контенту невеликий padding-bottom */
+.main-content {
+  padding-bottom: 20px;
+}
